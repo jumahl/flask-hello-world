@@ -1,12 +1,12 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Action_Juan
+name: YO
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "master" ]
+    branches: ["master"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -21,10 +21,19 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: "Paso 1"
-        run:
+        run: |
           echo "Hola mundo"
           hostname
           pwd
-          ls -1
-          find . 
+          ls -l
+          find .
+      - name: Clonando el repositorio
+        uses: actions/checkout@v4
+      - name: "Paso 2"
+        run: |
+          echo "Hola mundo"
+          hostname
+          pwd
+          ls -l
+          find .
           
